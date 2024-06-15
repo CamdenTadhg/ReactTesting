@@ -26,13 +26,5 @@ function App() {
 
 export default App;
 
-//Demo App & Read Code
-//Write smoke tests for all components
-//Write snapshot tests for all components
-//Write test for Left Arrow Bug
-//Fix Left Arrow Bug
-//Write test for disappearing arrows
-//Fix disappearing arrows
-
 //write coin flip counter
 //write coin flip tests

@@ -15,5 +15,10 @@
 }
 
 .bi {
-  font-size: 35px
+  font-size: 35px;
+  width: 10vw;
+}
+
+.spacer {
+  width: 11vw;
 }

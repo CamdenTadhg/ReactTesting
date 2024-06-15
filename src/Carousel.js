@@ -25,24 +25,26 @@ import Card from "./Card";
     setCurrCardIdx(currCardIdx + 1);
   }
 
+  //Decrements currCardIdx state by 1
+  function goBackward() {
+    setCurrCardIdx(currCardIdx - 1);
+  }
+
+  const firstImage = currCardIdx === 0;
+  const lastImage = currCardIdx === photos.length-1;
+
   return (
     <div className="Carousel">
       <h1>{title}</h1>
       <div className="Carousel-main">
-        <i
-          className="bi bi-arrow-left-circle"
-          onClick={goForward}
-        />
+        {firstImage ? <div className="spacer"></div> : <i className="bi bi-arrow-left-circle" onClick={goBackward}/>}
         <Card
           caption={currCard.caption}
           src={currCard.src}
           currNum={currCardIdx + 1}
           totalNum={total}
         />
-        <i
-          className="bi bi-arrow-right-circle"
-          onClick={goForward}
-        />
+        {lastImage ? <div className="spacer"></div>: <i className="bi bi-arrow-right-circle" onClick={goForward}/>}
       </div>
     </div>
   );
